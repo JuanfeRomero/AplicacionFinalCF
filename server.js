@@ -27,13 +27,19 @@ let data = [
   {id: 2, author: "Autor 2", text: "Comentario 2"}
 ];
 
-let server = http.createServer(app).listen(port, () =>{
-  console.log("esta conectado al port " + port);
-})
+let server = http.createServer(app);
 
-const io = new engine.Server(server);
+const io = new engine.Server(server, {
+  cors: {
+    origin: "http://localhost:8000",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["EIO", "transport"],
+    credentials: false
+  }
+}).listen(port);
 
 io.on('connection', (socket) =>{
+  console.log("esta conectado al port " + port);
   socket.on('read', ()=>{
     console.log("Entró al socket");
     io.emit('data', data);

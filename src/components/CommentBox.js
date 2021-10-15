@@ -15,6 +15,6 @@ export default class CommentBox extends React.Component {
                 <CommentForm/>
                 <CommentList/>
             </div>
-        )
+        );
     }
 }

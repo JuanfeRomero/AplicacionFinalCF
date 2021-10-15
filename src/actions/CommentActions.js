@@ -1,7 +1,7 @@
 import Reflux from 'reflux';
 
-let CommentActions = Reflux.createAction([
+let CommentActions = Reflux.createActions([
     'fetchComments'
-])
+]);
 
-export default CommentActions
+export default CommentActions;

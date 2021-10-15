@@ -13,6 +13,6 @@ export default class CommentForm extends React.Component{
                 <input type="hidden" name="id" value={Date.now()}/>
                 <input type="submit" value="Enviar"/>
             </form>
-        )
+        );
     }
 }

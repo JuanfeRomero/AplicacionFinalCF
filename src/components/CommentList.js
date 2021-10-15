@@ -9,9 +9,9 @@ export default class CommentList extends React.Component {
     render() {
         return(
             <div className="comment">
-                <h2>Nombre Autor</h2>
-                <p>Comment</p>
+                <Comment />
+                <Comment />
             </div>
-        )
+        );
     }
 }
