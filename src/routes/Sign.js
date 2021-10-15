@@ -3,8 +3,10 @@ import Reflux from 'reflux';
 import CommentBox from '../components/CommentBox';
 import CommentStore from '../stores/CommentStores';
 import CommentActions from '../actions/CommentActions';
+import { Link } from 'react-router-dom';
 
-export default class Sign extends Reflux.Component{ 
+
+export default class Sign extends Reflux.Component{
     constructor(){
         super()
         this.stores = [CommentStore]
@@ -17,8 +19,8 @@ export default class Sign extends Reflux.Component{
     render() {
         return(
             <div className="sign">
-                <h1>React Facilito, Pasa y firma</h1>
                 <CommentBox/>
+                <Link to="/">Volver a Home</Link>
             </div>
         )
     }

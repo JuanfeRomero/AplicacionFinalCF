@@ -9,7 +9,6 @@ export default class Home extends React.Component{
     render() {
             return(
                 <div className="home">
-                    <h1>React Facilito, Pasa y firma</h1>
                     <Link to='sign'>Firma Ahora!</Link>
                 </div>
             );
