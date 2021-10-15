@@ -17,11 +17,16 @@ export default class Sign extends Reflux.Component{
     }
 
     render() {
-        return(
-            <div className="sign">
-                <CommentBox/>
-                <Link to="/">Volver a Home</Link>
-            </div>
-        )
+        //console.log(JSON.stringify(this.state, null, 5))
+        if(!this.state.comments){
+            return(<h1>Loading</h1>)
+        }else{
+            return(
+                <div className="sign">
+                    <CommentBox data= {this.state.comments}/>
+                    <Link to="/">Volver a Home</Link>
+                </div>
+            )
+        }
     }
 }

@@ -6,12 +6,14 @@ import CommentActions from '../actions/CommentActions';
 let CommentStores = Reflux.createStore({
     listenables: [CommentActions],
     init: function(){
+        this.state = { comments: null}
         this.socket = io('http://localhost:3000', {
             withCredentials: false
         });
 
         this.socket.on('data', (data) =>{
-            this.trigger(data);
+            this.state.comments = data;
+            this.trigger(this.state);
         });
     },
     fetchComments: function() {

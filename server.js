@@ -26,7 +26,6 @@ let data = [
   {id: 1, author: "Autor 1", text: "Comentario 1"},
   {id: 2, author: "Autor 2", text: "Comentario 2"}
 ];
-
 let server = http.createServer(app);
 
 const io = new engine.Server(server, {
