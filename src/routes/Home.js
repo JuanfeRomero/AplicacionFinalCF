@@ -8,8 +8,8 @@ export default class Home extends React.Component{
 
     render() {
             return(
-                <div className="home">
-                    <Link to='sign'>Firma Ahora!</Link>
+                <div className="text-center">
+                    <button className="btn btn-outline-primary btn-lg"><Link to='sign'>Firma Ahora!</Link></button>
                 </div>
             );
     }

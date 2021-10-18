@@ -13,7 +13,7 @@ export default class CommentBox extends React.Component {
         console.log(JSON.stringify(this.props, null, 4))
         return(
             <div className="commentbox">
-                <CommentForm/>
+                <CommentForm onSubmit={this.props.onSubmit}/>
                 <CommentList data={this.props.data}/>
             </div>
         );
